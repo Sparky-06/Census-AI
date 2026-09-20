@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#94a3b8" />
+  <!-- Puddle & storm drain concrete -->
+  <ellipse cx="200" cy="180" rx="140" ry="60" fill="#38bdf8" opacity="0.3" />
+  <ellipse cx="195" cy="175" rx="100" ry="40" fill="#0284c7" opacity="0.4" />
+  <!-- Storm grate -->
+  <rect x="120" y="110" width="160" height="90" rx="4" fill="#334155" stroke="#1e293b" stroke-width="3" />
+  <line x1="145" y1="110" x2="145" y2="200" stroke="#64748b" stroke-width="4" />
+  <line x1="170" y1="110" x2="170" y2="200" stroke="#64748b" stroke-width="4" />
+  <line x1="195" y1="110" x2="195" y2="200" stroke="#64748b" stroke-width="4" />
+  <line x1="220" y1="110" x2="220" y2="200" stroke="#64748b" stroke-width="4" />
+  <line x1="245" y1="110" x2="245" y2="200" stroke="#64748b" stroke-width="4" />
+  <!-- Grate blockage -->
+  <path d="M 130 155 Q 175 125 215 170 Q 165 200 130 155" fill="#78350f" opacity="0.8" />
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgWater" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1" />
+      <stop offset="60%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+    <linearGradient id="hydrant" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="50%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="waterStream" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.6" />
+    </linearGradient>
+  </defs>
+  <!-- Background Sidewalk -->
+  <rect width="400" height="300" fill="url(#bgWater)" />
+  <rect y="190" width="400" height="110" fill="#475569" />
+  <line x1="0" y1="190" x2="400" y2="190" stroke="#334155" stroke-width="4" />
+
+  <!-- Puddle on pavement -->
+  <ellipse cx="230" cy="245" rx="140" ry="35" fill="#38bdf8" opacity="0.45" />
+  <ellipse cx="230" cy="245" rx="110" ry="22" fill="#0284c7" opacity="0.3" />
+
+  <!-- Yellow Fire Hydrant / Water valve post -->
+  <rect x="110" y="80" width="40" height="115" rx="6" fill="url(#hydrant)" stroke="#b45309" stroke-width="2" />
+  <!-- Dome top -->
+  <path d="M 105 80 Q 130 50 155 80 Z" fill="url(#hydrant)" stroke="#b45309" stroke-width="2" />
+  <circle cx="130" cy="55" r="7" fill="#f59e0b" stroke="#b45309" stroke-width="1.5" />
+  <!-- Nozzles -->
+  <rect x="95" y="105" width="16" height="20" rx="3" fill="#d97706" />
+  <rect x="148" y="105" width="22" height="22" rx="3" fill="#d97706" stroke="#92400e" stroke-width="1.5" />
+  <rect x="100" y="175" width="60" height="20" rx="4" fill="#78350f" />
+
+  <!-- Water Jet shooting from right nozzle -->
+  <path d="M 170 115 Q 230 110 320 230 L 290 245 Q 220 135 170 125 Z" fill="url(#waterStream)" />
+  <path d="M 170 117 Q 240 125 340 240 L 320 248 Q 230 140 170 122 Z" fill="#e0f2fe" opacity="0.7" />
+
+  <!-- Splashes -->
+  <circle cx="310" cy="225" r="6" fill="#e0f2fe" opacity="0.8" />
+  <circle cx="330" cy="235" r="4" fill="#e0f2fe" opacity="0.9" />
+  <circle cx="280" cy="230" r="5" fill="#bae6fd" opacity="0.7" />
+  <circle cx="350" cy="245" r="3" fill="#bae6fd" opacity="0.6" />
+</svg>
