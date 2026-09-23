@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgPark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1" />
+      <stop offset="50%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+    <linearGradient id="binGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="50%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <!-- Background Pavement & Wall -->
+  <rect width="400" height="300" fill="url(#bgPark)" />
+  <rect y="170" width="400" height="130" fill="#334155" />
+
+  <!-- Municipal Trash Bin (Large Dark Blue/Grey Bin) -->
+  <rect x="130" y="110" width="120" height="130" rx="4" fill="url(#binGrad)" stroke="#475569" stroke-width="2" />
+  <!-- Ribs on bin -->
+  <line x1="160" y1="120" x2="160" y2="230" stroke="#1e293b" stroke-width="3" />
+  <line x1="190" y1="120" x2="190" y2="230" stroke="#1e293b" stroke-width="3" />
+  <line x1="220" y1="120" x2="220" y2="230" stroke="#1e293b" stroke-width="3" />
+
+  <!-- Overflowing Garbage bags & waste -->
+  <circle cx="160" cy="100" r="28" fill="#1e293b" />
+  <circle cx="205" cy="90" r="32" fill="#0f172a" />
+  <circle cx="230" cy="105" r="24" fill="#334155" />
+
+  <!-- White and yellow plastic bags overflowing -->
+  <path d="M 140 100 Q 155 70 175 95 Q 185 110 160 115 Z" fill="#e2e8f0" stroke="#cbd5e1" />
+  <path d="M 190 95 Q 210 65 225 85 Q 235 110 205 105 Z" fill="#fef08a" stroke="#facc15" />
+  <path d="M 215 105 Q 240 85 255 105 Q 250 120 225 115 Z" fill="#93c5fd" stroke="#60a5fa" />
+
+  <!-- Trash scattered on ground -->
+  <path d="M 80 240 Q 110 220 125 245 Z" fill="#e2e8f0" />
+  <path d="M 100 250 Q 120 240 135 260 Z" fill="#fef08a" />
+  <ellipse cx="270" cy="255" rx="25" ry="14" fill="#1e293b" />
+  <rect x="250" y="240" width="18" height="12" rx="2" fill="#ef4444" opacity="0.8" />
+  <rect x="280" y="245" width="24" height="8" rx="2" fill="#e2e8f0" />
+  <circle cx="120" cy="265" r="7" fill="#64748b" />
+</svg>

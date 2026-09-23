@@ -8,20 +8,20 @@ import {
   Star, 
   BarChart2, 
   Megaphone, 
-  HelpCircle
+  HelpCircle,
 } from 'lucide-react';
 
 export default function Sidebar({ activeNav = 'Dashboard', onNavigate = () => {} }) {
   const sidebarItems = [
-    { id: 'Dashboard', label: 'Dashboard', icon: Home },
-    { id: 'FileComplaint', label: 'File a Complaint', icon: PlusCircle },
-    { id: 'TrackComplaint', label: 'Track Complaint', icon: Search },
-    { id: 'MyComplaints', label: 'My Complaints', icon: FileText },
-    { id: 'Services', label: 'Services', icon: LayoutGrid },
-    { id: 'Feedback', label: 'Citizen Feedback', icon: Star },
-    { id: 'Analytics', label: 'Reports & Analytics', icon: BarChart2 },
-    { id: 'Announcements', label: 'Announcements', icon: Megaphone },
-    { id: 'Help', label: 'Help & Support', icon: HelpCircle },
+    { id: 'Dashboard',      label: 'Dashboard',           icon: Home },
+    { id: 'FileComplaint',  label: 'File a Complaint',    icon: PlusCircle },
+    { id: 'TrackComplaint', label: 'Track Complaint',     icon: Search },
+    { id: 'MyComplaints',   label: 'My Complaints',       icon: FileText },
+    { id: 'Services',       label: 'Services',            icon: LayoutGrid },
+    { id: 'Feedback',       label: 'Citizen Feedback',    icon: Star },
+    { id: 'Analytics',      label: 'Reports & Analytics', icon: BarChart2 },
+    { id: 'Announcements',  label: 'Announcements',       icon: Megaphone },
+    { id: 'Help',           label: 'Help & Support',      icon: HelpCircle },
   ];
 
   return (
@@ -30,7 +30,9 @@ export default function Sidebar({ activeNav = 'Dashboard', onNavigate = () => {}
       <nav className="space-y-1.5 p-3 pb-2 overflow-y-auto">
         {sidebarItems.map((item) => {
           const Icon = item.icon;
-          const isActive = activeNav === item.id || (item.id === 'Dashboard' && (activeNav === 'Home' || activeNav === 'Dashboard'));
+          const isActive =
+            activeNav === item.id ||
+            (item.id === 'Dashboard' && (activeNav === 'Home' || activeNav === 'Dashboard'));
 
           return (
             <button
@@ -49,11 +51,11 @@ export default function Sidebar({ activeNav = 'Dashboard', onNavigate = () => {}
         })}
       </nav>
 
-      {/* Bottom Civic Branding Area — Full Width Flush to edges, No horizontal line */}
+      {/* Bottom Civic Branding Area */}
       <div className="w-full shrink-0 mt-auto overflow-hidden">
-        <img 
-          src="/demo/sidebar-branding.png" 
-          alt="My City My Responsibility" 
+        <img
+          src="/demo/sidebar-branding.png"
+          alt="My City My Responsibility"
           className="w-full h-auto object-cover block"
         />
       </div>

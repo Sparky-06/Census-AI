@@ -22,6 +22,9 @@ app.add_middleware(
 os.makedirs("uploads", exist_ok=True)
 app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 
+# We will mount the built React frontend at / at the bottom of the file
+_dashboard_dist = os.path.join(os.path.dirname(__file__), "frontend", "dist")
+
 reports = []
 
 def get_iso8601():
@@ -173,3 +176,17 @@ async def get_report(id: str):
         if r["id"] == id:
             return r
     return JSONResponse(status_code=404, content={"error": "Report not found", "code": "NOT_FOUND"})
+
+# Serve the built React app at the root (must be mounted last to not override /api and /uploads)
+if os.path.isdir(_dashboard_dist):
+    # Ensure static files serve correctly with proper Permissions-Policy
+    class CustomStaticFiles(StaticFiles):
+        def is_not_modified(self, response_headers, request_headers) -> bool:
+            return False # For dev reload purposes
+
+        async def get_response(self, path: str, scope):
+            response = await super().get_response(path, scope)
+            response.headers["Permissions-Policy"] = "camera=*, geolocation=*, microphone=*"
+            return response
+            
+    app.mount("/", CustomStaticFiles(directory=_dashboard_dist, html=True), name="frontend")
